@@ -13,6 +13,7 @@ public class MainActivity extends Activity {
 
     Button btnOne;
     Button btnTwo;
+    Button btnError;
     static TextView textInfo;
     static GoCallback gocb;
 
@@ -27,12 +28,20 @@ public class MainActivity extends Activity {
 
         btnOne = (Button) findViewById(R.id.btnone);
         btnTwo = (Button) findViewById(R.id.btntwo);
+        btnError = (Button) findViewById(R.id.btnerror);
         textInfo = (TextView) findViewById(R.id.textinfo);
 
         btnOne.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 clickDirect();
+            }
+        });
+
+        btnError.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                clickWithError();
             }
         });
 
@@ -52,9 +61,19 @@ public class MainActivity extends Activity {
         textInfo.setText(res);
     }
 
+    public static void clickWithError() {
+        textInfo.setText("Calling GO with error != nil...");
+        try {
+            String res = Mygolibrary.helloWithError("Apple Juice");
+            textInfo.setText(res);
+        } catch  (Exception e) { // If error != nil in Go, will enter the catch
+            textInfo.setText("Exception: " + e.toString());
+        }
+    }
+
     public static void clickCallback() {
         textInfo.setText("Calling GO that will call Java...");
-        Mygolibrary.helloCallback("Chai tea");
+        Mygolibrary.helloCallback("Chai Tea");
     }
 
     public static void changeText(String text) {

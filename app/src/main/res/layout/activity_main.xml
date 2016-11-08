@@ -24,4 +24,9 @@
             android:layout_height="wrap_content"
             android:text="Java Callback"
             android:id="@+id/btntwo" android:layout_alignTop="@+id/btnone" android:layout_alignEnd="@+id/textinfo"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Error != nil"
+            android:id="@+id/btnerror" android:layout_below="@+id/btnone" android:layout_centerHorizontal="true" android:layout_marginTop="69dp"/>
 </RelativeLayout>
