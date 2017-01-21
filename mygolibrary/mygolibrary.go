@@ -25,7 +25,7 @@ func HelloCallback(name string) {
 
 func RegisterJavaCallback(c JavaCallback) {
 	jc = c
-    fmt.Println("Java callback registered", jc);
+    fmt.Println("Java callback registered", jc)
 }
 
 

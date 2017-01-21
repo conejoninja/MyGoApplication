@@ -1,13 +1,15 @@
 package me.conejo.mygoapplication;
 
 import android.app.Activity;
-//import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-import go.mygolibrary.Mygolibrary;
+import mygolibrary.Mygolibrary;
+
+//import android.support.v7.app.AppCompatActivity;
+
 
 public class MainActivity extends Activity {
 

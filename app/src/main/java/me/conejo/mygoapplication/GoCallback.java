@@ -2,7 +2,7 @@ package me.conejo.mygoapplication;
 
 
 import android.util.Log;
-import go.mygolibrary.JavaCallback;
+import mygolibrary.JavaCallback;
 
 public class GoCallback implements JavaCallback {
 
